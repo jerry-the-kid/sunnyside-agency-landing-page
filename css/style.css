@@ -1,14 +1,3 @@
-@-webkit-keyframes jumpUpDown {
-  0% {
-    transform: translateY(-15px);
-  }
-  50% {
-    transform: translateY(15px);
-  }
-  100% {
-    transform: translateY(-15px);
-  }
-}
 @keyframes jumpUpDown {
   0% {
     transform: translateY(-15px);
@@ -20,6 +9,7 @@
     transform: translateY(-15px);
   }
 }
+
 *,
 *::after,
 *::before {
@@ -27,21 +17,24 @@
   padding: 0;
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 75em) {
   html {
     font-size: 50%;
   }
 }
+
 body {
   font-size: 1.8rem;
   background-color: #fffbf8;
-  overflow-x: hidden;
 }
+
 .no-scroll {
   overflow-y: hidden;
 }
@@ -50,6 +43,7 @@ body {
     overflow-y: scroll;
   }
 }
+
 .heading {
   font-family: 'Fraunces', serif;
   line-height: 1.3;
@@ -75,6 +69,7 @@ body {
   letter-spacing: 0.5rem;
   color: #a7abae;
 }
+
 .para {
   line-height: 1.6;
   font-family: 'Barlow', sans-serif;
@@ -85,15 +80,19 @@ body {
 .para-medium {
   color: #5a636c;
 }
+
 .m-bottom-small {
   margin-bottom: 1rem;
 }
+
 .m-bottom-medium {
   margin-bottom: 2.5rem;
 }
+
 .m-bottom-big {
   margin-bottom: 4rem;
 }
+
 .m-bottom-biggest {
   margin-bottom: 6rem;
 }
@@ -102,6 +101,7 @@ body {
     margin-bottom: 3.5rem;
   }
 }
+
 .info__content {
   display: flex;
   flex-direction: column;
@@ -109,11 +109,13 @@ body {
   width: calc(min(45rem, 80%));
   margin: 0 auto;
 }
+
 .info__content-box {
   display: grid;
   place-items: center;
   padding: 5rem 0;
 }
+
 .info__img {
   background-size: cover;
   background-position: center;
@@ -135,6 +137,7 @@ body {
     background-image: url(../images/mobile/image-stand-out.jpg);
   }
 }
+
 .info__link-box {
   display: inline-block;
   position: relative;
@@ -146,6 +149,7 @@ body {
     margin: auto;
   }
 }
+
 .info__link {
   font-family: 'Fraunces', serif;
   text-decoration: none;
@@ -154,6 +158,7 @@ body {
   color: #23303e;
   z-index: 1;
 }
+
 .highlight {
   position: absolute;
   width: 100%;
@@ -182,9 +187,11 @@ body {
     rgba(254, 120, 103, 0.3) 50%
   );
 }
+
 .info__link-box:hover .highlight {
   background-position: 0%;
 }
+
 .service {
   text-align: center;
 }
@@ -215,6 +222,7 @@ body {
 .service__text-box {
   max-width: 40rem;
 }
+
 .testimonials {
   padding: 15rem 0;
   text-align: center;
@@ -239,6 +247,7 @@ body {
     grid-row-gap: 8rem;
   }
 }
+
 .testimonial__img {
   height: 7rem;
   border-radius: 50%;
@@ -249,13 +258,16 @@ body {
     margin-bottom: 4rem;
   }
 }
+
 .testimonial__description p {
   font-size: 1.5rem;
   color: #a7abae;
 }
+
 .testimonial__description h4 {
   font-size: 1.9rem;
 }
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -291,6 +303,7 @@ body {
   background-repeat: no-repeat;
   background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
 }
+
 .footer {
   background-color: #95d4c6;
   padding: 6rem 0;
@@ -338,6 +351,7 @@ body {
 .footer__brand-link:hover .footer__brand path {
   fill: white;
 }
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -360,18 +374,21 @@ body {
     grid-template-rows: auto auto;
   }
 }
+
 @media only screen and (max-width: 46.875em) {
   .container__position--1 {
     grid-row: 1/2;
     min-height: 50rem;
   }
 }
+
 @media only screen and (max-width: 46.875em) {
   .container__position--2 {
     grid-row: 2/3;
     min-height: 55rem;
   }
 }
+
 .header {
   height: 100vh;
   background-image: url(../images/desktop/image-header.jpg);
@@ -384,12 +401,13 @@ body {
   text-align: center;
   width: auto;
 }
+
 .logo {
   height: 3.5rem;
 }
+
 .arrow {
   height: 10rem;
-  -webkit-animation: jumpUpDown 3s ease infinite;
   animation: jumpUpDown 3s ease infinite;
 }
 @media only screen and (max-width: 46.875em) {
@@ -397,6 +415,7 @@ body {
     display: none;
   }
 }
+
 .hamburger {
   display: none;
 }
@@ -406,6 +425,7 @@ body {
     cursor: pointer;
   }
 }
+
 .navbar {
   width: 100%;
   display: flex;
@@ -520,6 +540,7 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
 }
+
 .hidden {
   opacity: 0;
   visibility: hidden;
