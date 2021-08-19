@@ -36,19 +36,6 @@ const animate = function () {
     };
   };
 
-  gsap.to('.navbar', {
-    scrollTrigger: {
-      trigger: '.header',
-      toggleActions: 'play play reset none',
-      start: 'center center',
-      end: 'center 45%',
-    },
-    position: 'fixed',
-    top: 0,
-    backgroundColor: `rgba(136, 255, 247, 0.5)`,
-    padding: '2rem 4rem',
-  });
-
   const setImgOption = function (trigger, translate) {
     return {
       scrollTrigger: setOption(`${trigger}`),
@@ -57,6 +44,19 @@ const animate = function () {
       duration: 2,
     };
   };
+
+  gsap.to('.navbar', {
+    scrollTrigger: {
+      trigger: '#info--1',
+      toggleActions: 'play play reset none',
+      start: 'top center',
+      end: 'top center',
+    },
+    position: 'fixed',
+    top: 0,
+    backgroundColor: `rgba(136, 255, 247, 0.5)`,
+    padding: '2rem 4rem',
+  });
 
   gsap.from('.info__img--1', setImgOption('.info__img--1', '40%'));
 
